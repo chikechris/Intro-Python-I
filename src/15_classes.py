@@ -25,13 +25,11 @@ class Waypoint:
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 # YOUR CODE HERE
-class Geocache:
-    def __init__(self, name, difficulty, size, lat, lon):
-        self.name = name
-        self.difficulty = difficulty
-        self.size = size
-        self.lat = lat
-        self.lon = lon
+class Geocache(Waypoint):
+  def __init__(self, name, difficulty, size, lat, lon):
+    super().__init__(name, lat, lon)
+    self.size = size
+    self.difficulty = difficulty
     
     def __str__(self):
         return (f"{self.name} is a {self.difficulty} difficulty, comes in at size {self.size}, and resides at {self.lat} latitude, {self.lon} longitude.")

@@ -1,4 +1,4 @@
 # Print "Hello, world!" to your terminal
 
-greeting = "Hello World"
-print(greeting)
+greet = "Hello World"
+print(greet)
